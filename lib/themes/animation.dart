@@ -13,7 +13,7 @@ class FoodAppAnimation extends StatelessWidget {
   Widget build(BuildContext context) {
     return AnimationConfiguration.staggeredList(
       position: position,
-      duration: const Duration(milliseconds: 1000),
+      duration: const Duration(milliseconds: 500),
       child: FadeInAnimation(
         child: child,
       ),

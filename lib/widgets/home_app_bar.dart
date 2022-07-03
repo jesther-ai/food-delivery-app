@@ -21,33 +21,13 @@ class HomeAppBar extends StatelessWidget implements PreferredSizeWidget {
           child: Image.asset('assets/images/profilePicture.png'),
         ),
       ),
-      actions: [
-        FoodAppAnimation(
-          position: 1,
-          child: Image.asset(
-            'assets/images/notificationIcon.png',
-            height: 25,
-            width: 25,
-          ),
-        ),
-        const SizedBox(width: 10),
-        FoodAppAnimation(
-          position: 2,
-          child: Image.asset(
-            'assets/images/drawerIcon.png',
-            height: 25,
-            width: 25,
-          ),
-        ),
-        const SizedBox(width: 20),
-      ],
       centerTitle: false,
       title: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
-          FoodAppAnimation2(
-            position: 3,
+          FoodAppAnimation(
+            position: 1,
             child: Text(
               'Deliver to',
               style: GoogleFonts.poppins(
@@ -57,8 +37,8 @@ class HomeAppBar extends StatelessWidget implements PreferredSizeWidget {
               ),
             ),
           ),
-          FoodAppAnimation2(
-            position: 4,
+          FoodAppAnimation(
+            position: 2,
             child: Text(
               'Your Destination',
               style: GoogleFonts.poppins(
@@ -70,6 +50,26 @@ class HomeAppBar extends StatelessWidget implements PreferredSizeWidget {
           ),
         ],
       ),
+      actions: [
+        FoodAppAnimation(
+          position: 3,
+          child: Image.asset(
+            'assets/images/notificationIcon.png',
+            height: 25,
+            width: 25,
+          ),
+        ),
+        const SizedBox(width: 10),
+        FoodAppAnimation(
+          position: 4,
+          child: Image.asset(
+            'assets/images/drawerIcon.png',
+            height: 25,
+            width: 25,
+          ),
+        ),
+        const SizedBox(width: 20),
+      ],
     );
   }
 
