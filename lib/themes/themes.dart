@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:food_app_delivery/devices/utilities/hex_color.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class FoodAppTheme {
   static final darkTheme = ThemeData(
@@ -23,26 +25,25 @@ class FoodAppTheme {
   //-------------------------------------------------
   //-------------------------------------------------
   static final lightTheme = ThemeData(
-    textTheme: const TextTheme(
-      headlineLarge: TextStyle(
+    textTheme: TextTheme(
+      headlineLarge: const TextStyle(
         fontFamily: 'Inter',
         color: Colors.black,
         fontWeight: FontWeight.w700,
         fontSize: 35,
       ),
-      titleLarge: TextStyle(
+      titleLarge: const TextStyle(
         fontFamily: 'Inter',
         color: Colors.black,
         fontWeight: FontWeight.w400,
         fontSize: 20,
       ),
-      labelLarge: TextStyle(
-        fontFamily: 'Inter',
-        color: Colors.white,
-        fontWeight: FontWeight.w400,
-        fontSize: 20,
+      labelLarge: GoogleFonts.montserrat(
+        fontWeight: FontWeight.w700,
+        fontSize: 14,
+        color: HexColor('#FFFFFF'),
       ),
-      bodyLarge: TextStyle(
+      bodyLarge: const TextStyle(
         fontFamily: 'Inter',
         color: Colors.black,
         fontWeight: FontWeight.w300,

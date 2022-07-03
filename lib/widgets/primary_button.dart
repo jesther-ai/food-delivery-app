@@ -14,6 +14,7 @@ class PrimaryButton extends StatelessWidget {
     this.width,
     required this.action,
     this.image,
+    this.padding,
     Key? key,
   }) : super(key: key);
   final int position;
@@ -23,15 +24,17 @@ class PrimaryButton extends StatelessWidget {
   final Function action;
   final ButtonState state;
   final String? image;
+  final EdgeInsets? padding;
   @override
   Widget build(BuildContext context) {
-    Duration duration = const Duration(milliseconds: 150);
+    Duration duration = const Duration(milliseconds: 500);
     return FoodAppAnimation(
       position: position,
       child: AnimatedContainer(
         duration: duration,
         height: state == ButtonState.loading ? 60 : height,
         width: state == ButtonState.loading ? 60 : width,
+        padding: padding,
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(30),
           boxShadow: [
@@ -58,7 +61,7 @@ class PrimaryButton extends StatelessWidget {
                 ),
               ),
               backgroundColor:
-                  MaterialStateProperty.all<Color>(HexColor('#000000')),
+                  MaterialStateProperty.all<Color>(HexColor('#EC994B')),
             ),
             onPressed:
                 state != ButtonState.disabled && state != ButtonState.loading

@@ -13,9 +13,9 @@ class WelcomeHeader extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: 500,
       width: double.infinity,
       color: Colors.transparent,
+      padding: const EdgeInsets.only(top: 20),
       child: Stack(
         alignment: Alignment.center,
         children: [
@@ -24,6 +24,7 @@ class WelcomeHeader extends StatelessWidget {
             child: Image.asset(
               'assets/images/Main.png',
               width: 380,
+              height: 480,
             ),
           ),
           const Positioned(
@@ -60,7 +61,7 @@ class WelcomeHeader extends StatelessWidget {
             ),
           ),
           const Positioned(
-            bottom: 10,
+            bottom: 0,
             child: ReviewsComments(
               position: 5,
             ),
