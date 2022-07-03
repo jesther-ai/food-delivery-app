@@ -1,10 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:food_app_delivery/devices/utilities/hex_color.dart';
 import 'package:food_app_delivery/themes/animation.dart';
 import 'package:food_app_delivery/widgets/clock_icon.dart';
 import 'package:food_app_delivery/widgets/courier_badge.dart';
 import 'package:food_app_delivery/widgets/review_badge.dart';
-import 'package:google_fonts/google_fonts.dart';
+import 'package:food_app_delivery/widgets/review_comments.dart';
 
 class WelcomeHeader extends StatelessWidget {
   const WelcomeHeader({
@@ -14,9 +13,9 @@ class WelcomeHeader extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: 450,
+      height: 500,
       width: double.infinity,
-      color: Colors.red,
+      color: Colors.transparent,
       child: Stack(
         alignment: Alignment.center,
         children: [
@@ -43,7 +42,7 @@ class WelcomeHeader extends StatelessWidget {
           ),
           const Positioned(
             top: 15,
-            right: 20,
+            right: 45,
             child: ReviewBadge(
               position: 3,
             ),
@@ -60,6 +59,12 @@ class WelcomeHeader extends StatelessWidget {
               ),
             ),
           ),
+          const Positioned(
+            bottom: 10,
+            child: ReviewsComments(
+              position: 5,
+            ),
+          )
         ],
       ),
     );

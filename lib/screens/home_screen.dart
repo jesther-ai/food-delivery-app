@@ -9,14 +9,19 @@ class MyHomePage extends StatelessWidget {
     return Scaffold(
       extendBody: true,
       extendBodyBehindAppBar: true,
-      body: Column(
-        mainAxisAlignment: MainAxisAlignment.center,
-        children: [
-          const WelcomeHeader(),
-          Container(
-            color: Colors.blue,
+      body: SafeArea(
+        child: SingleChildScrollView(
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.start,
+            children: [
+              const WelcomeHeader(),
+              Container(
+                height: 300,
+                color: Colors.blue,
+              ),
+            ],
           ),
-        ],
+        ),
       ),
     );
   }

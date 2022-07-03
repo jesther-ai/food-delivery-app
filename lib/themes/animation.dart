@@ -35,7 +35,28 @@ class FoodAppAnimation1 extends StatelessWidget {
       position: position,
       duration: const Duration(milliseconds: 750),
       child: SlideAnimation(
-        verticalOffset: 750,
+        verticalOffset: 1500,
+        child: child,
+      ),
+    );
+  }
+}
+
+class FoodAppAnimation2 extends StatelessWidget {
+  const FoodAppAnimation2({
+    required this.position,
+    required this.child,
+    Key? key,
+  }) : super(key: key);
+  final int position;
+  final Widget child;
+  @override
+  Widget build(BuildContext context) {
+    return AnimationConfiguration.staggeredList(
+      position: position,
+      duration: const Duration(milliseconds: 750),
+      child: SlideAnimation(
+        horizontalOffset: 750,
         child: child,
       ),
     );
