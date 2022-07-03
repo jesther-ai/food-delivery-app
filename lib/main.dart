@@ -15,6 +15,7 @@ class MyApp extends StatelessWidget {
     return MultiProvider(
       providers: ActiveProviders.list,
       child: MaterialApp(
+        debugShowCheckedModeBanner: false,
         title: 'Food App Delivery',
         theme: ThemeData(
           primarySwatch: Colors.blue,
