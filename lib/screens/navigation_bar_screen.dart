@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:food_app_delivery/devices/utilities/hex_color.dart';
 import 'package:food_app_delivery/providers/navigation_bar_provider.dart';
 import 'package:food_app_delivery/screens/home_screen.dart';
+import 'package:food_app_delivery/themes/animation.dart';
 import 'package:provider/provider.dart';
 
 class NavScreen extends StatefulWidget {
@@ -78,43 +79,55 @@ class _NavScreenState extends State<NavScreen>
           padding: const EdgeInsets.only(bottom: 5, top: 5),
           tabs: [
             Tab(
-              child: Image.asset(
-                'assets/images/tab1.png',
-                height: currentIndex == 0 ? 25 : 25,
-                width: currentIndex == 0 ? 25 : 25,
-                color: currentIndex == 0
-                    ? HexColor('#EC994B')
-                    : HexColor('#C5C4CB'),
+              child: FoodAppAnimation(
+                position: 0,
+                child: Image.asset(
+                  'assets/images/tab1.png',
+                  height: currentIndex == 0 ? 25 : 25,
+                  width: currentIndex == 0 ? 25 : 25,
+                  color: currentIndex == 0
+                      ? HexColor('#EC994B')
+                      : HexColor('#C5C4CB'),
+                ),
               ),
             ),
             Tab(
-              child: Image.asset(
-                'assets/images/tab2.png',
-                height: currentIndex == 1 ? 25 : 25,
-                width: currentIndex == 1 ? 25 : 25,
-                color: currentIndex == 1
-                    ? HexColor('#EC994B')
-                    : HexColor('#939393'),
+              child: FoodAppAnimation(
+                position: 1,
+                child: Image.asset(
+                  'assets/images/tab2.png',
+                  height: currentIndex == 1 ? 25 : 25,
+                  width: currentIndex == 1 ? 25 : 25,
+                  color: currentIndex == 1
+                      ? HexColor('#EC994B')
+                      : HexColor('#939393'),
+                ),
               ),
             ),
             Tab(
-              child: Image.asset(
-                'assets/images/tab3.png',
-                height: currentIndex == 2 ? 25 : 25,
-                width: currentIndex == 2 ? 25 : 25,
-                color: currentIndex == 2
-                    ? HexColor('#EC994B')
-                    : HexColor('#939393'),
+              child: FoodAppAnimation(
+                position: 2,
+                child: Image.asset(
+                  'assets/images/tab3.png',
+                  height: currentIndex == 2 ? 25 : 25,
+                  width: currentIndex == 2 ? 25 : 25,
+                  color: currentIndex == 2
+                      ? HexColor('#EC994B')
+                      : HexColor('#939393'),
+                ),
               ),
             ),
             Tab(
-              child: Image.asset(
-                'assets/images/tab4.png',
-                height: currentIndex == 3 ? 25 : 25,
-                width: currentIndex == 3 ? 25 : 25,
-                color: currentIndex == 3
-                    ? HexColor('#EC994B')
-                    : HexColor('#939393'),
+              child: FoodAppAnimation(
+                position: 3,
+                child: Image.asset(
+                  'assets/images/tab4.png',
+                  height: currentIndex == 3 ? 25 : 25,
+                  width: currentIndex == 3 ? 25 : 25,
+                  color: currentIndex == 3
+                      ? HexColor('#EC994B')
+                      : HexColor('#939393'),
+                ),
               ),
             ),
           ],
