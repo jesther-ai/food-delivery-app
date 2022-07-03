@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:food_app_delivery/devices/utilities/functions.dart';
 import 'package:food_app_delivery/devices/utilities/hex_color.dart';
 import 'package:food_app_delivery/providers/welcome_provider.dart';
+import 'package:food_app_delivery/screens/home_screen.dart';
+import 'package:food_app_delivery/screens/navigation_bar_screen.dart';
 import 'package:food_app_delivery/themes/animation.dart';
 import 'package:food_app_delivery/widgets/primary_button.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -50,7 +53,7 @@ class WelcomeFooter extends StatelessWidget {
             ),
             const SizedBox(height: 30),
             Padding(
-              padding: const EdgeInsets.only(left: 35, right: 35),
+              padding: const EdgeInsets.only(left: 40, right: 40),
               child: PrimaryButton(
                 position: 2,
                 state: value.home,
@@ -59,6 +62,10 @@ class WelcomeFooter extends StatelessWidget {
                 width: width,
                 action: () {
                   value.setHomeButton();
+                  delay(2000, () {
+                    Navigator.of(context)
+                        .pushReplacementNamed(NavScreen.routeName);
+                  });
                 },
               ),
             ),

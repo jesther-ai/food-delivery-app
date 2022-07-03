@@ -42,8 +42,8 @@ class PrimaryButton extends StatelessWidget {
               color: state == ButtonState.disabled
                   ? Colors.transparent
                   : Colors.black38,
-              blurRadius: state == ButtonState.disabled ? 0 : 10,
-              offset: const Offset(2, 4),
+              blurRadius: state == ButtonState.disabled ? 0 : 3,
+              offset: const Offset(1, 2),
             ),
           ],
         ),
