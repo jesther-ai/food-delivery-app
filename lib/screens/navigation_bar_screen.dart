@@ -42,18 +42,15 @@ class _NavScreenState extends State<NavScreen>
             bottomNavigationBar: menu(context, value.currentIndex),
             floatingActionButtonLocation:
                 FloatingActionButtonLocation.centerFloat,
-            body: SafeArea(
-              bottom: false,
-              child: TabBarView(
-                controller: _tabController,
-                physics: const NeverScrollableScrollPhysics(),
-                children: const [
-                  HomeScreen(),
-                  SizedBox(),
-                  SizedBox(),
-                  SizedBox(),
-                ],
-              ),
+            body: TabBarView(
+              controller: _tabController,
+              physics: const NeverScrollableScrollPhysics(),
+              children: const [
+                HomeScreen(),
+                SizedBox(),
+                SizedBox(),
+                SizedBox(),
+              ],
             ),
           ),
         );
@@ -63,7 +60,8 @@ class _NavScreenState extends State<NavScreen>
 
   Widget menu(BuildContext context, int currentIndex) {
     return Container(
-      color: Colors.yellow,
+      color: Colors.white,
+      padding: const EdgeInsets.only(bottom: 30),
       child: Consumer<NavigationBarProvider>(builder: (context, value, child) {
         return TabBar(
           onTap: (index) {
@@ -75,45 +73,49 @@ class _NavScreenState extends State<NavScreen>
           // ),
           indicatorSize: TabBarIndicatorSize.label,
           indicatorWeight: 4,
-          unselectedLabelColor: HexColor('#939393'),
-          indicatorColor: HexColor('#D95A23'),
+          unselectedLabelColor: HexColor('#C5C4CB'),
+          indicatorColor: Colors.white,
           padding: const EdgeInsets.only(bottom: 5, top: 5),
           tabs: [
             Tab(
-              child: const SizedBox(),
-              // child: Image.asset(
-              //   'assets/images/tab1.png',
-              //   height: currentIndex == 0 ? 35 : 25,
-              //   width: currentIndex == 0 ? 35 : 25,
-              //   color: currentIndex == 0 ? Colors.white : HexColor('#939393'),
-              // ),
+              child: Image.asset(
+                'assets/images/tab1.png',
+                height: currentIndex == 0 ? 25 : 25,
+                width: currentIndex == 0 ? 25 : 25,
+                color: currentIndex == 0
+                    ? HexColor('#EC994B')
+                    : HexColor('#C5C4CB'),
+              ),
             ),
             Tab(
-              child: const SizedBox(),
-              // child: Image.asset(
-              //   'assets/images/tab2.png',
-              //   height: currentIndex == 1 ? 35 : 25,
-              //   width: currentIndex == 1 ? 35 : 25,
-              //   color: currentIndex == 1 ? Colors.white : HexColor('#939393'),
-              // ),
+              child: Image.asset(
+                'assets/images/tab2.png',
+                height: currentIndex == 1 ? 25 : 25,
+                width: currentIndex == 1 ? 25 : 25,
+                color: currentIndex == 1
+                    ? HexColor('#EC994B')
+                    : HexColor('#939393'),
+              ),
             ),
             Tab(
-              child: const SizedBox(),
-              // child: Image.asset(
-              //   'assets/images/tab3.png',
-              //   height: currentIndex == 2 ? 35 : 25,
-              //   width: currentIndex == 2 ? 35 : 25,
-              //   color: currentIndex == 2 ? Colors.white : HexColor('#939393'),
-              // ),
+              child: Image.asset(
+                'assets/images/tab3.png',
+                height: currentIndex == 2 ? 25 : 25,
+                width: currentIndex == 2 ? 25 : 25,
+                color: currentIndex == 2
+                    ? HexColor('#EC994B')
+                    : HexColor('#939393'),
+              ),
             ),
             Tab(
-              child: const SizedBox(),
-              // child: Image.asset(
-              //   'assets/images/tab4.png',
-              //   height: currentIndex == 3 ? 35 : 25,
-              //   width: currentIndex == 3 ? 35 : 25,
-              //   color: currentIndex == 3 ? Colors.white : HexColor('#939393'),
-              // ),
+              child: Image.asset(
+                'assets/images/tab4.png',
+                height: currentIndex == 3 ? 25 : 25,
+                width: currentIndex == 3 ? 25 : 25,
+                color: currentIndex == 3
+                    ? HexColor('#EC994B')
+                    : HexColor('#939393'),
+              ),
             ),
           ],
         );
