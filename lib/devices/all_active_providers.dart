@@ -1,3 +1,4 @@
+import 'package:food_app_delivery/providers/home_provider.dart';
 import 'package:food_app_delivery/providers/navigation_bar_provider.dart';
 import 'package:food_app_delivery/providers/welcome_provider.dart';
 import 'package:provider/provider.dart';
@@ -10,6 +11,9 @@ class ActiveProviders {
     ),
     ChangeNotifierProvider<NavigationBarProvider>(
       create: (context) => NavigationBarProvider(),
+    ),
+    ChangeNotifierProvider<HomeProvider>(
+      create: (context) => HomeProvider(),
     ),
   ];
 }

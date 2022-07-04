@@ -12,6 +12,7 @@ class PromoCard extends StatelessWidget {
     return FoodAppAnimation2(
       position: position,
       child: Container(
+        padding: const EdgeInsets.only(right: 25, left: 25),
         width: double.infinity,
         height: 169,
         decoration: BoxDecoration(

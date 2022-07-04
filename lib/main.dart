@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:food_app_delivery/devices/all_active_providers.dart';
 import 'package:food_app_delivery/devices/all_active_routes.dart';
-import 'package:food_app_delivery/screens/welcome_screen.dart';
+import 'package:food_app_delivery/screens/home_screen.dart';
 import 'package:provider/provider.dart';
 
 void main() {
@@ -21,7 +21,7 @@ class MyApp extends StatelessWidget {
         theme: ThemeData(
           primarySwatch: Colors.blue,
         ),
-        home: const WelcomeScreen(),
+        home: const HomeScreen(),
         routes: ActiveRoutes.list,
       ),
     );
