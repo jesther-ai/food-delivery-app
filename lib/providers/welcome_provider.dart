@@ -7,9 +7,9 @@ class WelcomeProvider with ChangeNotifier {
 
   ButtonState get home => _home;
 
-  init() {
+  init(ButtonState? value) {
     delay(1500, () {
-      _home = ButtonState.initial;
+      _home = value ?? ButtonState.initial;
       notifyListeners();
     });
   }
@@ -17,6 +17,6 @@ class WelcomeProvider with ChangeNotifier {
   setHomeButton() {
     _home = ButtonState.loading;
     notifyListeners();
-    init();
+    init(ButtonState.disabled);
   }
 }

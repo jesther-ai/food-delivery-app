@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:food_app_delivery/devices/utilities/functions.dart';
 import 'package:food_app_delivery/devices/utilities/hex_color.dart';
 import 'package:food_app_delivery/providers/welcome_provider.dart';
-import 'package:food_app_delivery/screens/home_screen.dart';
 import 'package:food_app_delivery/screens/navigation_bar_screen.dart';
 import 'package:food_app_delivery/themes/animation.dart';
 import 'package:food_app_delivery/widgets/primary_button.dart';
@@ -17,7 +16,7 @@ class WelcomeFooter extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     double width = MediaQuery.of(context).size.width;
-    Provider.of<WelcomeProvider>(context, listen: false).init();
+    Provider.of<WelcomeProvider>(context, listen: false).init(null);
     return Container(
       height: 300,
       width: double.infinity,
@@ -62,7 +61,7 @@ class WelcomeFooter extends StatelessWidget {
                 width: width,
                 action: () {
                   value.setHomeButton();
-                  delay(2000, () {
+                  delay(2500, () {
                     Navigator.of(context)
                         .pushReplacementNamed(NavScreen.routeName);
                   });
