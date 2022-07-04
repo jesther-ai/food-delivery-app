@@ -13,7 +13,7 @@ class HomeScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.white,
+      backgroundColor: HexColor('#F5F5F5'),
       appBar: const HomeAppBar(),
       body: SafeArea(
         child: SingleChildScrollView(
@@ -44,16 +44,18 @@ class HomeScreen extends StatelessWidget {
                     child!,
                     const PromoCard(position: 6),
                     const SizedBox(height: 20),
-                    const BySection(
+                    BySection(
                       position: 7,
                       title: 'Popular',
                       desc: 'See the most popular food on order',
+                      menu: value.popular,
                     ),
                     const SizedBox(height: 20),
-                    const BySection(
+                    BySection(
                       position: 8,
                       title: 'New Menu',
                       desc: 'See the most popular food on order',
+                      menu: value.popular.reversed.toList(),
                     ),
                   ],
                 );
